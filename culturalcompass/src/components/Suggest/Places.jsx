@@ -38,9 +38,9 @@ const Places = ({ images, alt, cityId }) => {
     ],
   };
 
-  const handleImageClick = (image) => {
-    // Redirect to the about page with the city id and image data
-    router.push(`/top?id=${cityId}&image=${image.title}`);
+  const handleImageClick = (imageId) => {
+    // Redirect to the about page with the city id and image id
+    router.push(`/top?id=${cityId}&imageId=${imageId}`);
   };
 
   return (
@@ -68,11 +68,11 @@ const Places = ({ images, alt, cityId }) => {
           </button>
           <div>
             <Slider ref={sliderRef} {...settings}>
-              {images.map((item, index) => (
+              {images.map((item) => (
                 <div
-                  key={index}
+                  key={item.id} // Use the image id as key for each slide
                   className="flex flex-col items-center gap-4 cursor-pointer pl-2 pr-2"
-                  onClick={() => handleImageClick(item)}
+                  onClick={() => handleImageClick(item.id)} // Pass the image id on click
                 >
                   <div className="flex items-center justify-center overflow-hidden rounded-md">
                     <Image

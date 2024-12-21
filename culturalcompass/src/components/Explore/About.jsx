@@ -55,7 +55,7 @@ const Readmore = () => {
         </div>
       </div>
 
-      {/* Pass the images, alt, and id to the Places component */}
+      {/* Pass the images, alt, and id  to the Places component */}
       <Places images={cityData.images} alt={cityData.city} cityId={cityData.id} />
     </div>
   );

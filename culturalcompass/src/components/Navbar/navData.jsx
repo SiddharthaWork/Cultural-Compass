@@ -22,7 +22,7 @@ const navMenu = [
       },
       {
         title: "Top Places",
-        link: "/services",
+        link: "/place",
         icon: <MdHomeRepairService/>,
 
       },

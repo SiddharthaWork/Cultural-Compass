@@ -11,6 +11,7 @@ const More = () => {
   const [cityData, setCityData] = useState(null);
   const searchParams = useSearchParams();
   const id = searchParams ? parseInt(searchParams.get("id") || "0", 10) : 0;
+  const imageId = searchParams ? parseInt(searchParams.get("imageId") || "0", 10) : 0; // Get imageId
 
   useEffect(() => {
     if (id) {
@@ -48,7 +49,22 @@ const More = () => {
           <p className="leading-7 text-black/80">{cityData.des}</p>
         </div>
 
-        {/* Attractions */}
+        {/* Filter and render images based on the imageId */}
+        {imageId && (
+          <div className="py-6">
+            <h2 className="text-xl font-bold">Attractions</h2>
+            {cityData.images
+              .filter((image) => image.id === imageId)  // Filter images based on imageId
+              .map((place, index) => (
+                <div key={index} className="mt-4">
+                  <h3 className="text-lg font-semibold">{place.title}</h3>
+                  <p>{place.des}</p>
+                </div>
+              ))}
+          </div>
+        )}
+
+        {/* Main Attractions List */}
         <div className="py-6">
           <h2 className="text-xl font-bold">Attractions</h2>
           {cityData.attractions.map((attraction, index) => (
@@ -58,6 +74,7 @@ const More = () => {
             </div>
           ))}
         </div>
+
         <div className="py-6">
           <h2 className="text-xl font-bold">Food</h2>
           {cityData.food.map((food, index) => (
@@ -78,10 +95,8 @@ const More = () => {
           ))}
         </div>
       </div>
-        
-      
 
-        <City/>
+      <City />
       {/* Pass the images to the Places component */}
     </div>
   );
