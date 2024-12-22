@@ -19,14 +19,14 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='relative flex items-center justify-between w-full h-20 gap-6 px-8 md:px-6 lg:px-10 drop-shadow-2xl bg-white '>
+      <div className='relative flex items-center justify-between w-full h-20 gap-6 px-8 md:px-6 lg:px-10 drop-shadow-2xl bg-white'>
         <div className="relative z-10 flex flex-row items-center md:justify-center justify-between w-full px-0 text-center text-black md:px-5 lg:px-10">
-          <div className="flex items-center">
+          <div className="flex items-center overflow-hidden">
             <Image
               height={500}
               width={500}
-              src='/logo.png'
-              className="w-20 h-8 cursor-pointer md:w-24 md:h-10 lg:w-36 lg:h-14"
+              src='/culturallogo.png'
+              className="w-20 h-8 cursor-pointer md:w-24 md:h-10 lg:w-26 lg:h-20 overflow-hidden pb-2"
               alt="Cultural Compass"
             />
           </div>

@@ -26,6 +26,12 @@ export const projectData = [
       food: [
         {id:1, name: "Burger", description: "A scenic hill station offering breathtaking views of the Himalayas." },
         {id:2, name: "MOMO", description: "A UNESCO World Heritage Site known for its medieval art and architecture." },
+        {id:3, name: "Pizza", description: "A scenic hill station offering breathtaking views of the Himalayas." },
+        {id:4, name: "Biryani", description: "A UNESCO World Heritage Site known for its medieval art and architecture." },
+        {id:5, name: "Bur", description: "A scenic hill station offering breathtaking views of the Himalayas." },
+        {id:6, name: "MO", description: "A UNESCO World Heritage Site known for its medieval art and architecture." },
+        {id:7, name: "Pza", description: "A scenic hill station offering breathtaking views of the Himalayas." },
+        {id:8, name: "yani", description: "A UNESCO World Heritage Site known for its medieval art and architecture." },
         // Add nearby places
       ]
     },
@@ -33,7 +39,7 @@ export const projectData = [
     {
       id: 2,
       city: "Pokhara",
-      des: "Kathmandu, the capital city of Nepal, is rich in history, culture, and natural beauty.",
+      des: "A scenic hill station offering breathtaking views of the Himalayas.",
       des2: "sdsaidugasdgsaiuydgsiagdiusahgdi",
       image: "/kathmandu.png",  // This could be a featured image for Kathmandu
       images: [
@@ -61,8 +67,8 @@ export const projectData = [
   
     {
       id: 3,
-      city: "Dhoka",
-      des: "Kathmandu, the capital city of Nepal, is rich in history, culture, and natural beauty.",
+      city: "Dolkha",
+      des: "A scenic hill station offering breathtaking views of the Himalayas.",
       des2: "sdsaidugasdgsaiuydgsiagdiusahgdi",
       image: "/kathmandu.png",  // This could be a featured image for Kathmandu
       images: [

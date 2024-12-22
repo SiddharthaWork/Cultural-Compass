@@ -38,21 +38,19 @@ const More = () => {
 
       {/* City Content */}
       <div className="flex flex-col w-full h-full lg:px-24 xl:px-32 xl:py-16 md:px-12 md:py-10 lg:py-20 px-6 py-6 relative">
-        {/* City Title */}
-        <div className="text-left space-y-6">
+        {/* <div className="text-left space-y-6">
           <h1 className="md:text-4xl text-2xl font-bold">{cityData.city}</h1>
           <p className="mt-4 text-xl text-gray-700">{cityData.des}</p>
         </div>
 
-        {/* City Details */}
         <div className="flex flex-col w-full h-full space-y-8 py-8 border-b border-black/20 md:text-base text-sm">
           <p className="leading-7 text-black/80">{cityData.des}</p>
-        </div>
+        </div> */}
 
         {/* Filter and render images based on the imageId */}
         {imageId && (
           <div className="py-6">
-            <h2 className="text-xl font-bold">Attractions</h2>
+            <h2 className="text-2xl font-bold">One of The Top Places of {cityData.city}</h2>
             {cityData.images
               .filter((image) => image.id === imageId)  // Filter images based on imageId
               .map((place, index) => (
@@ -75,13 +73,19 @@ const More = () => {
           ))}
         </div>
 
+
+        {/* Food List */}
         <div className="py-6">
           <h2 className="text-xl font-bold">Food</h2>
-          {cityData.food.map((food, index) => (
-            <div key={index} className="mt-4">
-              <h3 className="text-lg font-semibold">{food.name}</h3>
-            </div>
-          ))}
+          {cityData.food
+            .sort(() => Math.random() - 0.5) // Shuffle the food array
+            .slice(0, 4) // Limit the number of items (e.g., 3 random items)
+            .map((food, index) => (
+              <div key={index} className="mt-4">
+                <h3 className="text-xl font-semibold">{food.name}</h3>
+                <p className="mt-2 text-lg">{food.description}</p>
+              </div>
+            ))}
         </div>
 
         {/* Nearby Places */}
