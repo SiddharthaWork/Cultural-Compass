@@ -87,9 +87,9 @@ const Events = () => {
 
   return (
     <div>
-      <div className="w-full md:h-16 h-14 border-l-8 border-[#4cb9f2] flex justify-start items-center px-6 mx-32">
+      <div className="w-full md:h-16 h-14 border-l-8 border-[#4cb9f2] flex justify-start items-center px-6 mx-32 mt-12">
           <h1 className="md:text-4xl text-2xl text-black font-bold">
-            Explore the Cities
+            Upcoming Events
           </h1>
         </div>
     <div className="flex w-full h-full px-32 py-8">
@@ -115,20 +115,20 @@ const Events = () => {
       </div>
 
       {/* Events Section */}
-      <div className="w-1/2 pl-4">
-        <div className="space-y-6">
+      <div className="w-1/2 ">
+        <div className=" grid grid-cols-2 items-start gap-2">
           {showNoEventsMessage ? (
             <div className="text-center text-gray-600 font-semibold">
               No events found for the selected date.
             </div>
           ) : (
-            filteredEvents.slice(0, 3).map((item) => (
+            filteredEvents.slice(0, 4).map((item) => (
               <div
                 key={item.id}
-                className="flex justify-center items-center mb-4"
+                className="flex justify-center items-center mb-4 "
                 onClick={() => openModal(item)}  // Open modal on event click
               >
-                <div className="w-[22rem] h-[18rem] bg-white flex flex-col rounded-xl overflow-hidden shadow-lg relative gap-8">
+                <div className="w-[18rem] h-[18rem] bg-white flex flex-col rounded-xl overflow-hidden shadow-lg relative gap-8">
                   <div className="w-full h-[8rem] bg-blue-400">
                     <img
                       src={item.image}

@@ -60,7 +60,7 @@ const Header = () => {
         <h2 className="text-white md:text-6xl text-5xl lg:text-7xl font-semibold"><span className="text-red-500">Explore</span>Nepal</h2>
         <p className="text-white lg:text-3xl md:text-2xl text-xl font-normal">A Journey Through Culture, Adventure, and Serenity</p>
         <p className="text-white lg:text-lg md:text-base text-sm font-normal md:w-[70%] w-[80%]"> Discover the rich heritage, breathtaking landscapes, and vibrant traditions of Nepal. From the majestic Himalayas to serene temples, embark on an unforgettable cultural and travel experience.</p>
-        <CustomButton buttonText="Plan My Trip"/>
+        <CustomButton buttonText="Plan Your Trip"/>
       </div>
       <div className="w-[10%] flex md:justify-center justify-start items-center ">
         <GrNext onClick={handleNext} className="bg-[#2B2B2B] cursor-pointer hover:font-bold transition-all duration-300 ease-in-out hover:bg-[#FEC601] lg:w-[60px] md:p-4 p-2 lg:p-5 lg:h-[60px] md:w-12 md:h-12 w-8 h-8 rounded-full hover:text-black text-white text-xl"/>

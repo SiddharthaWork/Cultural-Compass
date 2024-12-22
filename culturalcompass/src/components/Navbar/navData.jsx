@@ -28,7 +28,7 @@ const navMenu = [
       },
       {
         title: "Our Guides",
-        link: "/how-we-work",
+        link: "/guide",
         icon: <GrUserWorker/>,
 
       },

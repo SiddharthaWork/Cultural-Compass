@@ -1,0 +1,172 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Guide Page Container */
+.guide-page {
+  text-align: center;
+  padding: 10px; /* Reduced padding */
+  background-color: #ffffff;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 20px auto; /* Added margin around the page */
+}
+
+/* Button Container for Cities (Horizontal Scroll) */
+/* Button Container for Cities (Horizontal Scroll) */
+/* Button Container for Cities (Horizontal Scroll) */
+.button-container {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  gap: 24px; /* Increased gap between buttons */
+  padding: 12px 0; /* Adjusted padding above and below */
+  margin-bottom: 20px; /* Space below container */
+  scroll-snap-type: x mandatory; /* Smooth scrolling effect */
+  scroll-behavior: smooth; /* Smooth scroll on interaction */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling for iOS */
+  max-width: 100%; /* Ensures container doesn't exceed screen width */
+  white-space: nowrap; /* Prevents wrapping to a new line */
+}
+
+/* Button Styles for Each City */
+.guide-button {
+  padding: 10px 20px; /* Comfortable button padding */
+  font-size: 1rem; /* Font size for better readability */
+  background-color: #af514c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+  scroll-snap-align: start; /* Align the button to the left edge */
+  margin: 0 8px; /* Added horizontal margin to create space around each button */
+}
+
+.guide-button:hover {
+  background-color: #a04e45;
+  transform: scale(1.05);
+}
+
+
+
+/* Content Cards Section */
+.guide-display {
+  display: grid;
+  gap: 16px; /* Reduced gap between cards */
+  padding: 16px 0; /* Reduced padding around the grid */
+}
+
+/* Guide Cards Container for Selected Place */
+.guide-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjusted min-width for cards */
+  gap: 16px; /* Reduced gap between cards */
+}
+
+/* Individual Guide Card */
+.guide-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px; /* Reduced padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styles */
+.title {
+  font-size: 1.8rem; /* Adjusted font size */
+  color: #333;
+  margin-bottom: 16px; /* Reduced margin */
+  font-weight: bold;
+}
+
+/* Guide Name and Details */
+.guide-card h3 {
+  font-size: 1.1rem; /* Adjusted font size */
+  color: #333;
+  margin-bottom: 8px; /* Reduced margin */
+  font-weight: bold;
+}
+
+.guide-card p {
+  color: #555;
+  margin: 4px 0; /* Reduced margin between paragraphs */
+  font-size: 0.9rem; /* Reduced font size */
+}
+
+.guide-card a {
+  color: #af514c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.guide-card a:hover {
+  text-decoration: underline;
+}
+
+/* Adding contact and pricing details to each guide card */
+.guide-card .contact-info {
+  font-size: 0.85rem; /* Reduced font size */
+  color: #777;
+  margin-top: 8px; /* Reduced margin */
+}
+
+.guide-card .contact-info p {
+  margin: 3px 0;
+}
+
+.guide-card .contact-info a {
+  color: #af514c;
+  text-decoration: none;
+}
+
+.guide-card .contact-info a:hover {
+  text-decoration: underline;
+}
+
+.guide-card .pricing {
+  font-size: 0.95rem; /* Reduced font size */
+  font-weight: bold;
+  color: #333;
+  margin-top: 12px; /* Reduced margin */
+}
+
+
+.guide-card .pricing span {
+  color: #af514c;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .guide-display {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .guide-button {
+    padding: 6px 12px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .guide-display {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-button {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}

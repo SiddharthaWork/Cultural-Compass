@@ -5,11 +5,11 @@ import Events from "@/components/Home/Events";
 
 export default function Home() {
   return (
-   <div>
+   <div className="overflow-hidden">
     <Header/>
     <City/>
-    <Topplaces/>
     <Events/>
+    <Topplaces/>
    </div>
   );
 }
